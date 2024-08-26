@@ -1,6 +1,55 @@
-const {niceLogger} = require("../src/niceLogger.js");
+// Import a specific function from the file
+const {niceLogger, messageRepeater} = require("../src/niceLogger.js");
 
-test("niceLogger returns Hello world!", () => {
-    
-    expect(niceLogger()).toBe("Hello world!");
+
+
+// Import the file 
+const niceLoggerFile = require("../src/niceLogger.js");
+// Import a specific function from the file
+const niceLoggerFunction = niceLoggerFile.niceLogger;
+
+describe("niceLogger function tests", () => {
 });
+
+describe("niceLogger function tests", () => {
+	test("niceLogger returns Hello world!", () => {
+
+		expect(niceLogger()).toBe("Hello world!");
+	});	
+
+	test("niceLogger returns Hello world!", () => {
+
+		expect(niceLogger()).toBe("Hello world!");
+	});	
+
+	test("niceLogger returns Hello world!", () => {
+
+		expect(niceLogger()).toBe("Hello world!");
+	});	
+
+	test("niceLogger returns Hello world!", () => {
+
+		expect(niceLogger()).toBe("Hello world!");
+	});	
+});
+
+describe("niceLogger function tests", () => {
+
+    test.skip("messageRepeater repeates words correctly", () => {
+
+    });
+
+    test("messageRepeater repeates numbers correctly", () => {
+
+    });
+
+    test("messageRepeater repeates arrays correctly", () => {
+
+    });
+
+    test.skip("messageRepeater repeates null or whitespace correctly", () => {
+
+    });
+});
+    
+    
