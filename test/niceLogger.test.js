@@ -35,11 +35,18 @@ describe("niceLogger function tests", () => {
 
 describe("niceLogger function tests", () => {
 
-    test.skip("messageRepeater repeates words correctly", () => {
+    test("messageRepeater repeates words correctly", () => {
+        let repeatedMessage = messageRepeater("hello");
 
+        expect(repeatedMessage).toEqual("hellohellohello");
+        expect(repeatedMessage).toHaveLength(15);
     });
 
     test("messageRepeater repeates numbers correctly", () => {
+        let repeatedMessage = messageRepeater(["hello", "world"]);
+        console.log(repeatedMessage);
+        expect(repeatedMessage).toEqual(["hello", "world", "hello", "world", "hello", "world"]);
+        expect(repeatedMessage).toHaveLength(6);
 
     });
 
@@ -47,8 +54,11 @@ describe("niceLogger function tests", () => {
 
     });
 
-    test.skip("messageRepeater repeates null or whitespace correctly", () => {
+    test("messageRepeater repeates null or whitespace correctly", () => {
+        let repeatedMessage = messageRepeater("");
 
+        expect(repeatedMessage).toEqual("");
+        expect(repeatedMessage).toHaveLength(0);
     });
 });
     
